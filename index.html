@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car | Bibles</title>
+    <!--google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/9af9caa4b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--css-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Heading section-->
+    <section class="nav-container">
+      <nav>
+        <div class="nav-brand">
+          <i class="fas fa-dharmachakra"></i>
+          <h4>CAR</h4>
+        </div>
+        <ul class="menu-list">
+          <li><a href="#">Home</a></li>
+          <li class="Categories">
+            <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+            <ul class="sub-menu-1">
+              <li class="accessories">
+                <a href="#">Accessories &nbsp;></a>
+                <ul class="sub-menu2">
+                  <li><a href="#">Interior Accessories</a></li>
+                  <li><a href="#">Exterior Accessories</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Cleaning & Detailing</a></li>
+              <li><a href="#">Engine & Performance</a></li>
+              <li><a href="#">Tires & Wheels</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li>
+            <a href="#">Tools <i class="fas fa-chevron-down"></i></a>
+          </li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="social-container">
+          <div class="social">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+          <i class="fas fa-search fa-2x" onclick="hide_social()"></i>
+        </div>
+        <div class="search-box">
+          <input type="text" class="search" placeholder="Search something" />
+          <i class="fas fa-times fa-2x" onclick="hide_search()"></i>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </section>
+    <!--Landing section-->
+    <section class="landing">
+      <div class="grid-container">
+        <div class="grid-item caption-box">
+          <div class="caption-1">
+            <p id="para">CAR CARE</p>
+            <h2 id="top-h2">Best Wax For Black Cars in 2020</h2>
+            <button class="btn-1">READ MORE</button>
+            <div class="indicator">
+              <div onclick="min()">-</div>
+              <div onclick="add()">+</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="slider">
+            <div onclick="slider(0)" class="active"></div>
+            <div onclick="slider(1)"></div>
+            <div onclick="slider(2)"></div>
+            <div onclick="slider(3)"></div>
+            <div onclick="slider(4)"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
