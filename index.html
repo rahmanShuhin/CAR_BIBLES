@@ -55,7 +55,10 @@
           <li><a href="#">Contact</a></li>
         </ul>
         <div class="search-box">
-          <input type="text" class="search" placeholder="Search something" />
+          <div class="search-icon-mbl">
+            <input type="text" class="search" placeholder="Search" />
+            <i class="fas fa-search"></i>
+          </div>
           <i class="fas fa-times fa-2x" onclick="hide_search()"></i>
         </div>
         <div class="social-container">
@@ -84,8 +87,10 @@
             <h2 id="top-h2">Best Wax For Black Cars in 2020</h2>
             <button class="btn-1">READ MORE</button>
             <div class="indicator">
-              <div onclick="min()">-</div>
-              <div onclick="add()">+</div>
+              <div onclick="min()"><i class="fas fa-caret-left fa-2x"></i></div>
+              <div onclick="add()">
+                <i class="fas fa-caret-right fa-2x"></i>
+              </div>
             </div>
           </div>
         </div>

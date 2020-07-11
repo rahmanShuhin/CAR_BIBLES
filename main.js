@@ -75,9 +75,11 @@ const min = () => {
 const navShow = () => {
   const menu = document.querySelector(".menu-list");
   const social = document.querySelector(".social-container");
+  const search = document.querySelector(".search-box");
   const burger = document.querySelector(".burger");
   burger.classList.toggle("toggle");
   menu.classList.toggle("nav-active");
   social.classList.toggle("nav-active");
+  search.classList.toggle("nav-active");
   console.log(menu);
 };
