@@ -70,3 +70,14 @@ const min = () => {
   count--;
   slider(count);
 };
+
+//nav bar show hide
+const navShow = () => {
+  const menu = document.querySelector(".menu-list");
+  const social = document.querySelector(".social-container");
+  const burger = document.querySelector(".burger");
+  burger.classList.toggle("toggle");
+  menu.classList.toggle("nav-active");
+  social.classList.toggle("nav-active");
+  console.log(menu);
+};

@@ -1,3 +1,5 @@
+/***************Basic Setup*********************
+***********************************************/
 * {
   padding: 0px;
   margin: 0px;
@@ -6,6 +8,8 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+/***************Common Style*********************
+***********************************************/
 ul li {
   list-style: none;
 }
@@ -17,7 +21,9 @@ a {
   color: lightgray;
   font-size: 16px;
 }
-/*navigation section */
+
+/***************Navigation style*********************
+***********************************************/
 .nav-container {
   position: sticky;
   top: 0px;
@@ -45,6 +51,8 @@ nav {
   content: "BIBLES";
   color: rgb(236, 46, 46);
 }
+/***************List item and ul li of navigation*********************
+***********************************************/
 .menu-list {
   list-style: none;
   display: flex;
@@ -62,6 +70,8 @@ nav {
   color: rgb(236, 46, 46);
   text-decoration: underline;
 }
+/***************Social icon for navigation*********************
+***********************************************/
 .social-container {
   display: flex;
   width: 30%;
@@ -95,22 +105,9 @@ nav {
 .fa-2x {
   font-size: 25px !important;
 }
-.search-box {
-  width: 30%;
-  display: none;
-  justify-content: space-between;
-}
-.search {
-  padding: 7px 5px;
-  border: none;
-  border-bottom: 2px solid rgb(236, 46, 46);
-  width: 88%;
-  transition: border-bottom 2s ease-in-out;
-}
-.search:focus {
-  outline: none;
-  border-bottom: 2px solid rgb(236, 46, 46);
-}
+
+/***************Sub menu for ul li top navigation*********************
+***********************************************/
 /*sub menu */
 .Categories {
   position: relative;
@@ -160,8 +157,41 @@ nav {
   background: rgba(167, 30, 30, 0.384);
   color: rgb(236, 46, 46);
 }
+/***************Search Input for navigation*********************
+***********************************************/
+.search-box {
+  width: 30%;
+  display: none;
+  justify-content: space-between;
+}
+.search {
+  padding: 7px 5px;
+  border: none;
+  border-bottom: 2px solid rgb(236, 46, 46);
+  width: 88%;
+  transition: border-bottom 2s ease-in-out;
+}
+.search:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(236, 46, 46);
+}
+.search-for-mbl {
+  display: none;
+}
+/***************Hamburger*********************
+***********************************************/
+.toggle .line1 {
+  transform: translate(-0px, 6px) rotate(-45deg);
+}
+.toggle .line3 {
+  transform: translate(-0px, -7px) rotate(45deg);
+}
+.toggle .line2 {
+  opacity: 0;
+}
 /*end section of navigation */
-
+/***************Landing page section start from here*********************
+***********************************************/
 /*landing section */
 .landing {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -174,6 +204,8 @@ nav {
   position: relative !important;
   transition: all 3s ease-in;
 }
+/**********Landing page section layout**********
+********************************************/
 .caption-box {
   display: flex;
   align-items: flex-end;
@@ -186,6 +218,8 @@ nav {
 .grid-item {
   height: 82vh;
 }
+/**********Landing page text and heading **********
+********************************************/
 .caption-1 p {
   font-weight: bold;
   transition: all 3s ease-in;
@@ -209,6 +243,8 @@ nav {
   background-color: rgb(39, 38, 38);
   border: 1px solid white;
 }
+/**********slider clickable section for js**********
+********************************************/
 /*slider*/
 .slider {
   display: flex;
@@ -230,11 +266,20 @@ nav {
   background-color: rgb(236, 46, 46) !important;
   transition: all 0.1s ease-in;
 }
-
+.nav-active {
+  transform: translateX(0%) !important;
+}
 /**********bye********/
+/**********End of design section for larger device **********
+********************************************/
 
-/*mobile device responsive*/
+/**********Responsive style start from here**********
+********************************************/
+/**only for small device**/
 @media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
   .landing {
     margin: 0px 3%;
   }
@@ -242,45 +287,11 @@ nav {
     background-color: black;
     min-height: 10vh;
   }
-  body {
-    overflow-x: hidden;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 20px;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-    height: 10vh;
-    box-shadow: 2px 2px 30px gray;
-  }
-  .nav-brand {
-    color: white;
-    font-size: 20px;
-  }
-  .menu-list {
-    display: none;
-  }
-  .social-container {
-    display: none;
-  }
-  .burger {
-    border: 1px solid red;
-    border-radius: 50%;
-    padding: 10px;
-  }
-  .burger > div {
-    width: 25px;
-    height: 2px;
-    background-color: lightgray;
-    margin: 5px 0px;
+  .grid-container {
+    grid-template-columns: 100% auto;
   }
   .grid-item:nth-child(2) {
     display: none;
-  }
-  .grid-container {
-    grid-template-columns: 100% auto;
   }
   .caption-1 {
     display: flex;
@@ -292,6 +303,9 @@ nav {
     font-size: 10vw;
     margin: 10px 0px;
     transition: all 3s ease-in;
+  }
+  .menu-list > li a {
+    font-size: 5vw !important;
   }
   .indicator {
     display: flex;
@@ -319,10 +333,6 @@ nav {
 }
 /*for i-pad or medium device */
 @media only screen and (max-width: 1020px) {
-  .nav-container {
-    background-color: black;
-    min-height: 10vh;
-  }
   body {
     overflow-x: hidden;
   }
@@ -336,29 +346,128 @@ nav {
     height: 10vh;
     box-shadow: 2px 2px 30px gray;
   }
+  .nav-container {
+    background-color: black;
+    min-height: 10vh;
+  }
   .nav-brand {
     color: white;
   }
+  /* ul li for hamburger*/
   .menu-list {
-    display: none;
+    position: absolute;
+    left: 0px;
+    top: 9vh;
+    background-color: black;
+    color: white;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.15s ease-in;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 15% 0% 5% 0%;
+  }
+  .menu-list li {
+    margin: 3% 0%;
+  }
+  .menu-list > li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 3vw;
   }
   .caption-1 h2 {
-    font-size: 10vw;
+    font-size: 35px;
     margin: 10px 0px;
     transition: all 3s ease-in;
   }
+  .search-box {
+    display: block;
+    align-items: center;
+    width: 100%;
+    padding: 0% 10%;
+    position: absolute;
+    left: 0px;
+    bottom: -70vh;
+    transform: translateX(0%);
+    transition: transform 0.15s ease-in;
+  }
+  .search-box input {
+    background: black;
+    padding: 5%;
+    border: 1px solid red;
+    border-radius: 10px;
+  }
   .social-container {
+    display: flex;
+    align-items: center;
+    background: red;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: -80vh;
+    transform: translateX(-100%);
+    transition: transform 0.15s ease-in;
+  }
+  .social {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto auto;
+  }
+  .social-container .fa-search {
     display: none;
   }
+  .fa-twitter,
+  .fa-pinterest-p,
+  .fa-facebook-f,
+  .fa-instagram {
+    color: lightgray;
+    background: orange;
+    padding: 16px 20px;
+    border-radius: 50%;
+    text-align: center;
+    border-radius: 100px;
+    font-size: 18px;
+    display: inline-block;
+  }
+  /*hamburger******/
   .burger {
     border: 1px solid red;
     border-radius: 50%;
-    padding: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
   }
   .burger > div {
     width: 25px;
     height: 2px;
     background-color: lightgray;
     margin: 5px 0px;
+    transition: transform 0.15s;
+  }
+  .Categories {
+    position: relative;
+    transition: transform 1s;
+    z-index: 6;
+    padding: 0px 0px;
+  }
+  .Categories ul li {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px;
+  }
+  .sub-menu-1 {
+    display: none;
+    position: absolute;
+    padding: 40px 0px;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 300px;
+    z-index: 5;
+    background-color: black !important;
   }
 }
