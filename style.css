@@ -30,10 +30,10 @@ a {
   left: 0px;
   z-index: 20;
   background-color: white;
-  min-height: 12vh;
+  max-height: 11vh;
 }
 nav {
-  min-height: 12vh;
+  max-height: 12vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -293,6 +293,10 @@ nav {
   .landing {
     margin: 0px 3%;
   }
+  .nav-container {
+    background-color: black;
+    min-height: 10vh;
+  }
   .grid-container {
     grid-template-columns: 100% auto;
   }
@@ -367,17 +371,15 @@ nav {
     min-height: 10vh;
     box-shadow: 2px 2px 30px gray;
   }
-  .nav-container{
-    min-height: 10vh;
-    background-color: black;
-  }
-  }
   ::placeholder {
     color: lightgray;
     font-size: 15px;
     text-transform: uppercase;
   }
-
+  .nav-container {
+    background-color: black;
+    min-height: 10vh;
+  }
   .nav-brand {
     color: white;
   }
@@ -529,6 +531,9 @@ nav {
     height: 300px;
     z-index: 5;
     background-color: black !important;
+  }
+  .sub-menu2 {
+    display: none;
   }
   .accessories:hover > .sub-menu2 {
     display: none;
